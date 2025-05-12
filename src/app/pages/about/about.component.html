@@ -1,1 +1,80 @@
-<p>about works!</p>
+<div class="about-container">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>关于我们</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p>
+        这是一个 Angular 示例项目，展示了如何使用 Angular Material 和表单功能。
+      </p>
+
+      <h3>联系我们</h3>
+      <form
+        [formGroup]="contactForm"
+        (ngSubmit)="onSubmit()"
+        class="contact-form"
+      >
+        <mat-form-field appearance="outline" class="form-field">
+          <mat-label>姓名</mat-label>
+          <input matInput formControlName="name" placeholder="请输入您的姓名" />
+          <mat-error
+            *ngIf="f['name'].errors?.['required'] && (f['name'].touched || submitted)"
+          >
+            姓名是必填项
+          </mat-error>
+          <mat-error
+            *ngIf="f['name'].errors?.['minlength'] && (f['name'].touched || submitted)"
+          >
+            姓名至少需要2个字符
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="form-field">
+          <mat-label>邮箱</mat-label>
+          <input
+            matInput
+            formControlName="email"
+            placeholder="请输入您的邮箱"
+          />
+          <mat-error
+            *ngIf="f['email'].errors?.['required'] && (f['email'].touched || submitted)"
+          >
+            邮箱是必填项
+          </mat-error>
+          <mat-error
+            *ngIf="f['email'].errors?.['email'] && (f['email'].touched || submitted)"
+          >
+            请输入有效的邮箱地址
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="form-field">
+          <mat-label>留言</mat-label>
+          <textarea
+            matInput
+            formControlName="message"
+            rows="5"
+            placeholder="请输入您的留言"
+          ></textarea>
+          <mat-error
+            *ngIf="f['message'].errors?.['required'] && (f['message'].touched || submitted)"
+          >
+            留言是必填项
+          </mat-error>
+          <mat-error
+            *ngIf="f['message'].errors?.['minlength'] && (f['message'].touched || submitted)"
+          >
+            留言至少需要10个字符
+          </mat-error>
+        </mat-form-field>
+
+        <div class="form-actions">
+          <button mat-raised-button color="primary" type="submit">提交</button>
+          <button mat-button type="button" (click)="contactForm.reset()">
+            重置
+          </button>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

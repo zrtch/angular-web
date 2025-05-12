@@ -199,3 +199,33 @@ export class ApiService {
   }
 }
 ```
+
+## 表单
+
+1. 在组件中导入 ReactiveFormsModule
+2. 创建表单：
+
+```ts
+import { FormBuilder, FormGroup, Validators } from "@angular/forms";
+
+export class ContactComponent implements OnInit {
+  contactForm: FormGroup;
+
+  constructor(private fb: FormBuilder) {}
+
+  ngOnInit(): void {
+    this.contactForm = this.fb.group({
+      name: ["", Validators.required],
+      email: ["", [Validators.required, Validators.email]],
+      message: ["", Validators.required],
+    });
+  }
+
+  onSubmit(): void {
+    if (this.contactForm.valid) {
+      console.log(this.contactForm.value);
+      // 处理表单提交
+    }
+  }
+}
+```
