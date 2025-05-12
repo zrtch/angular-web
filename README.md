@@ -99,23 +99,23 @@ export const routes: Routes = [
 
 - components/ : 存放可复用组件
 
-- navigation/ : 导航组件
-  - navigation.component.ts : 导航组件的 TypeScript 文件
-  - navigation.component.html : 导航组件的 HTML 模板
-  - navigation.component.scss : 导航组件的样式文件
-  - navigation.component.spec.ts : 导航组件的测试文件
-- pages/ : 存放页面级组件
+  - navigation/ : 导航组件
+    - navigation.component.ts : 导航组件的 TypeScript 文件
+    - navigation.component.html : 导航组件的 HTML 模板
+    - navigation.component.scss : 导航组件的样式文件
+    - navigation.component.spec.ts : 导航组件的测试文件
 
-- home/ : 首页组件
-  - home.component.ts : 首页组件的 TypeScript 文件
-  - home.component.html : 首页组件的 HTML 模板
-  - home.component.scss : 首页组件的样式文件
-  - home.component.spec.ts : 首页组件的测试文件
-- about/ : 关于页面组件
-  - about.component.ts : 关于页面组件的 TypeScript 文件
-  - about.component.html : 关于页面组件的 HTML 模板
-  - about.component.scss : 关于页面组件的样式文件
-  - about.component.spec.ts : 关于页面组件的测试文件
+- pages/ : 存放页面级组件
+  - home/ : 首页组件
+    - home.component.ts : 首页组件的 TypeScript 文件
+    - home.component.html : 首页组件的 HTML 模板
+    - home.component.scss : 首页组件的样式文件
+    - home.component.spec.ts : 首页组件的测试文件
+  - about/ : 关于页面组件
+    - about.component.ts : 关于页面组件的 TypeScript 文件
+    - about.component.html : 关于页面组件的 HTML 模板
+    - about.component.scss : 关于页面组件的样式文件
+    - about.component.spec.ts : 关于页面组件的测试文件
 
 ## 添加新页面
 
