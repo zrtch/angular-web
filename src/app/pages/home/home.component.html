@@ -15,5 +15,16 @@
         了解更多
       </button>
     </mat-card-actions>
+    <mat-card-actions>
+      <mat-slide-toggle>Toggle me!</mat-slide-toggle>
+    </mat-card-actions>
+    <section class="example-section">
+      <mat-checkbox class="example-margin" [(ngModel)]="checked"
+        >Checked</mat-checkbox
+      >
+      <mat-checkbox class="example-margin" [(ngModel)]="indeterminate"
+        >Indeterminate</mat-checkbox
+      >
+    </section>
   </mat-card>
 </div>
