@@ -1,0 +1,13 @@
+<mat-toolbar color="primary">
+  <span>Angular Material 演示</span>
+  <span class="spacer"></span>
+
+  <div class="nav-links">
+    @for (link of navLinks; track link.path) {
+    <a mat-button [routerLink]="link.path" routerLinkActive="active-link">
+      <mat-icon>{{ link.icon }}</mat-icon>
+      {{ link.label }}
+    </a>
+    }
+  </div>
+</mat-toolbar>
